@@ -395,16 +395,16 @@ GROUP BY
 ##################################### Answer #####################################
 SELECT Student_ID, Student_Name, Course, Statuss
 FROM Student1;
--------------------------------------------------------------------
+-----------------------------------------------
 SELECT Student_ID, Student_Name, Joining_Dates
 FROM Student1
 WHERE Statuss = 'IN_Active';
----------------------------------------------------------------
+----------------------------------------------
 SELECT Student_ID, COUNT(*) AS Present_Count
 FROM Attendance
 WHERE Attendance = 'P'
 GROUP BY Student_ID;
----------------------------------------------------------------------------------------
+-----------------------------------------------
 SELECT 
     s.Student_Name,
     f.Teacher_Name,
@@ -414,7 +414,7 @@ FROM
 JOIN Student1 s ON a.Student_ID = s.Student_ID
 JOIN Faculty f ON a.Teacher_ID = f.Teacher_ID
 GROUP BY s.Student_Name, f.Teacher_Name, a.Course_Subject;
------------------------------------------------------------------------------
+----------------------------------------------------------
 SELECT 
     s.Student_Name,
     ROUND(SUM(p.Obtined_Marks) / SUM(p.Total_marks) * 100, 2) AS Percentage
@@ -426,7 +426,7 @@ WHERE
 GROUP BY 
     s.Student_Name;
 
--------------------------------------------------------------------------
+----------------------------------
 SELECT 
     Student_ID,
     Course_Subject,
@@ -437,7 +437,7 @@ WHERE
     Attendance = 'P'
 GROUP BY 
     Student_ID, Course_Subject;
----------------------------------------------------------------------
+-----------------------------
 SELECT 
     s.Student_Name,
     p.Course_Subject,
@@ -449,4 +449,4 @@ GROUP BY
     s.Student_Name, p.Course_Subject
 HAVING 
     Percentage < 50;
-------------------------------------------------------------------------------
+
