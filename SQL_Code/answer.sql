@@ -1,3 +1,5 @@
+-- PUNERI PATTERN SQL code
+
 use puneri_pattern_2;
 select 
 S.Student_Name,S.Joining_Dates ,S.Current_Status as Student_Status,S.Course_name ,S.Gender as Student_Gender,
