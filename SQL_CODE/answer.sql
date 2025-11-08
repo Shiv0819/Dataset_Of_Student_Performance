@@ -1,4 +1,4 @@
--- PUNERI PATTERN SQL
+-- PUNERI PATTERN SQL code
 
 use puneri_pattern_2;
 select 
